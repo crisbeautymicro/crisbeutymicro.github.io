@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CB Coworking - Sala Profissional no Estreito | Aluguel para Profissionais</title>
+    <meta name="description" content="Sala profissional no Estreito, Florianópolis. Ambiente perfeito para psicólogos, terapeutas e profissionais de estética. Aluguel flexível diário, semanal ou mensal.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2563EB;
+            --primary-dark: #1E40AF;
+            --secondary: #F59E0B;
+            --light: #F8FAFC;
+            --dark: #1E293B;
+            --gray: #64748B;
+            --success: #25D366;
+            --instagram: #E4405F;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        header.scrolled {
+            padding: 0.7rem 0;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .contact-header {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .btn-whatsapp {
+            background: var(--success);
+            color: white;
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+        }
+
+        .btn-whatsapp:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                        url('https://images.unsplash.com/photo-1513694203232-719a280e022f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            min-height: 700px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding-top: 80px;
+            position: relative;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.9;
+            font-weight: 500;
+            animation: fadeInUp 0.8s ease-out 0.2s forwards;
+            opacity: 0;
+        }
+
+        .hero-highlight {
+            color: var(--secondary);
+        }
+
+        .hero-cta {
+            display: flex;
+            justify-content: center;
+            animation: fadeInUp 0.8s ease-out 0.4s forwards;
+            opacity: 0;
+        }
+
+        .btn-primary {
+            background: var(--secondary);
+            color: var(--dark);
+            text-decoration: none;
+            padding: 18px 35px;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(245, 158, 11, 0.4);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(245, 158, 11, 0.5);
+            background: #FBBF24;
+        }
+
+        .hero-scroll {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bounce 2s infinite;
+            cursor: pointer;
+        }
+
+        /* Video Section */
+        .video-section {
+            padding: 100px 0;
+            background: var(--light);
+        }
+
+        .video-container {
+            max-width: 800px;
+            margin: 0 auto;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .video-container iframe {
+            width: 100%;
+            height: 450px;
+            border: none;
+        }
+
+        /* Diferenciais */
+        .diferenciais {
+            padding: 100px 0;
+            background: white;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: var(--gray);
+            max-width: 700px;
+            margin: 0 auto 3rem;
+            font-weight: 500;
+        }
+
+        .diferenciais-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .diferencial-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: all 0.4s;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .diferencial-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--secondary);
+        }
+
+        .diferencial-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .diferencial-icon {
+            font-size: 3.5rem;
+            margin-bottom: 25px;
+            color: var(--primary);
+        }
+
+        .diferencial-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+
+        .diferencial-card p {
+            color: var(--gray);
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        /* Flexibilidade */
+        .flexibilidade {
+            padding: 100px 0;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .flexibilidade::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 300px;
+            height: 300px;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="rgba(255,255,255,0.05)"><path d="M30,10 Q50,5 70,10 T90,30 Q95,50 90,70 T70,90 Q50,95 30,90 T10,70 Q5,50 10,30 T30,10"></path></svg>');
+            background-size: contain;
+            transform: translate(30%, -30%);
+        }
+
+        .section-title.light {
+            color: white;
+        }
+
+        .section-subtitle.light {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .flex-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .flex-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 40px 30px;
+            border-radius: 15px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.4s;
+        }
+
+        .flex-card:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-5px);
+        }
+
+        .flex-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--secondary);
+        }
+
+        .flex-card h4 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .flex-card p {
+            opacity: 0.9;
+            font-size: 1rem;
+        }
+
+        /* Localização */
+        .localizacao {
+            padding: 100px 0;
+            background: white;
+        }
+
+        .local-info h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+
+        .local-info p {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            color: var(--gray);
+        }
+
+        .local-benefits {
+            margin: 25px 0;
+        }
+
+        .benefit-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .benefit-icon {
+            color: var(--success);
+            font-size: 1.2rem;
+        }
+
+        .endereco {
+            background: rgba(16, 185, 129, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid var(--success);
+            margin-top: 30px;
+        }
+
+        .endereco strong {
+            color: var(--dark);
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 100px 0;
+            background: linear-gradient(135deg, var(--secondary) 0%, #F97316 100%);
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section h2 {
+            font-size: 2.8rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 2.5rem;
+            opacity: 0.9;
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .btn-cta-primary {
+            background: white;
+            color: var(--dark);
+            text-decoration: none;
+            padding: 18px 35px;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-cta-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+            background: #F8FAFC;
+        }
+
+        /* Contato */
+        .contato {
+            padding: 100px 0;
+            background: var(--light);
+        }
+
+        .contato-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .contato-info {
+            text-align: center;
+        }
+
+        .contato-info h3 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            color: var(--primary);
+        }
+
+        .contato-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+            gap: 15px;
+        }
+
+        .contato-icon {
+            font-size: 1.5rem;
+            color: var(--primary);
+        }
+
+        .contato-text strong {
+            display: block;
+            margin-bottom: 5px;
+            color: var(--dark);
+        }
+
+        .contato-text a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .contato-text a:hover {
+            color: var(--primary-dark);
+            text-decoration: underline;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        .social-link {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            transition: all 0.3s;
+        }
+
+        .social-link.whatsapp {
+            background: var(--success);
+            color: white;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+        }
+
+        .social-link.instagram {
+            background: var(--instagram);
+            color: white;
+            box-shadow: 0 4px 15px rgba(228, 64, 95, 0.3);
+        }
+
+        .social-link:hover {
+            transform: translateY(-3px);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 60px 0 30px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .footer-col h4 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: white;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-col h4::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background: var(--secondary);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: all 0.3s;
+            font-size: 0.95rem;
+        }
+
+        .footer-links a:hover {
+            color: white;
+            padding-left: 5px;
+        }
+
+        .footer-about p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 30px;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+        }
+
+        /* WhatsApp Flutuante */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: var(--success);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            transition: all 0.3s;
+            z-index: 999;
+        }
+
+        .whatsapp-float:hover {
+            transform: translateY(-5px) scale(1.1);
+            box-shadow: 0 6px 25px rgba(37, 211, 102, 0.5);
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .video-container iframe {
+                height: 400px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .section-title {
+                font-size: 2.2rem;
+            }
+            
+            .video-container iframe {
+                height: 350px;
+            }
+            
+            .btn-primary,
+            .btn-cta-primary {
+                padding: 15px 25px;
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+            
+            .hero {
+                min-height: 600px;
+            }
+            
+            .cta-section h2 {
+                font-size: 2.2rem;
+            }
+            
+            .video-container iframe {
+                height: 250px;
+            }
+            
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                font-size: 1.5rem;
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+
+        /* Animações */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0) translateX(-50%);
+            }
+            40% {
+                transform: translateY(-20px) translateX(-50%);
+            }
+            60% {
+                transform: translateY(-10px) translateX(-50%);
+            }
+        }
+
+        .animate-fade-in {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        .delay-1 {
+            animation-delay: 0.2s;
+        }
+
+        .delay-2 {
+            animation-delay: 0.4s;
+        }
+    </style>
+</head>
+<body>
+    <!-- WhatsApp Flutuante -->
+    <a href="https://wa.me/5548998392258?text=Olá! Tenho interesse na sala profissional no Estreito." class="whatsapp-float">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    CB Coworking
+                </div>
+                <div class="contact-header">
+                    <a href="https://wa.me/5548998392258?text=Olá! Tenho interesse na sala profissional no Estreito. Gostaria de mais informações." class="btn-whatsapp">
+                        <i class="fab fa-whatsapp"></i> WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="animate-fade-in">Sala Profissional com <span class="hero-highlight">Elegância e Conforto</span></h1>
+                <p class="hero-subtitle animate-fade-in delay-1">Ambiente premium no coração do Estreito com vista para o mar, perfeito para profissionais que valorizam um espaço diferenciado</p>
+                <div class="hero-cta animate-fade-in delay-2">
+                    <a href="https://wa.me/5548998392258?text=Olá! Gostaria de agendar uma visita à sala profissional no Estreito." class="btn-primary">
+                        <i class="fas fa-calendar-alt"></i> Agendar Visita
+                    </a>
+                </div>
+            </div>
+        </div>
+        <a href="#video" class="hero-scroll">↓</a>
+    </section>
+
+    <!-- Video Section -->
+    <section class="video-section" id="video">
+        <div class="container">
+            <h2 class="section-title">Conheça Nosso <span style="color: var(--secondary);">Espaço</span></h2>
+            <p class="section-subtitle">Veja em vídeo o que faz da nossa sala a escolha perfeita para seu consultório</p>
+            
+            <div class="video-container">
+                <!-- Substitua pelo embed do seu vídeo do Instagram ou YouTube -->
+                <iframe src="https://www.instagram.com/p/DL0DzqVx-I5/embed" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diferenciais -->
+    <section class="diferenciais">
+        <div class="container">
+            <h2 class="section-title">O Que Faz Nossa Sala <span style="color: var(--secondary);">Especial</span></h2>
+            <p class="section-subtitle">Um ambiente projetado para impressionar seus clientes e elevar sua prática profissional</p>
+            
+            <div class="diferenciais-grid">
+                <div class="diferencial-card animate-fade-in">
+                    <div class="diferencial-icon"><i class="fas fa-water"></i></div>
+                    <h3>Vista Inspiradora</h3>
+                    <p>Janelões com vista panorâmica do mar criam um ambiente relaxante que seus clientes vão adorar e lembrar.</p>
+                </div>
+                <div class="diferencial-card animate-fade-in delay-1">
+                    <div class="diferencial-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <h3>Localização Premium</h3>
+                    <p>No coração do Estreito, a 5 minutos das pontes, com estacionamento fácil e todo comércio necessário ao redor.</p>
+                </div>
+                <div class="diferencial-card animate-fade-in delay-2">
+                    <div class="diferencial-icon"><i class="fas fa-couch"></i></div>
+                    <h3>Ambiente Aconchegante</h3>
+                    <p>Design moderno e acústica perfeita para criar a atmosfera ideal para seus atendimentos.</p>
+                </div>
+                <div class="diferencial-card animate-fade-in">
+                    <div class="diferencial-icon"><i class="fas fa-building"></i></div>
+                    <h3>8º Andar Privilegiado</h3>
+                    <p>Privacidade total e status elevado, longe do barulho da rua, com vista desimpedida.</p>
+                </div>
+                <div class="diferencial-card animate-fade-in delay-1">
+                    <div class="diferencial-icon"><i class="fas fa-star"></i></div>
+                    <h3>Elegância Profissional</h3>
+                    <p>Um espaço que transmite profissionalismo e cuidado, aumentando a percepção de valor do seu trabalho.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Flexibilidade -->
+    <section class="flexibilidade">
+        <div class="container">
+            <h2 class="section-title light">Flexibilidade de <span style="color: var(--secondary);">Aluguel</span></h2>
+            <p class="section-subtitle light">Escolha o plano que melhor se adapta à sua rotina profissional</p>
+            
+            <div class="flex-grid">
+                <div class="flex-card animate-fade-in">
+                    <div class="flex-icon"><i class="fas fa-calendar-day"></i></div>
+                    <h4>Diária</h4>
+                    <p>Perfeito para profissionais que atendem esporadicamente ou fazem procedimentos pontuais.</p>
+                </div>
+                <div class="flex-card animate-fade-in delay-1">
+                    <div class="flex-icon"><i class="fas fa-calendar-week"></i></div>
+                    <h4>Pacote Semanal</h4>
+                    <p>Ideal para quem tem agenda flexível e atende alguns dias por semana.</p>
+                </div>
+                <div class="flex-card animate-fade-in delay-2">
+                    <div class="flex-icon"><i class="fas fa-calendar-alt"></i></div>
+                    <h4>Mensal</h4>
+                    <p>Para profissionais estabelecidos que precisam de um espaço fixo e exclusivo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Localização -->
+    <section class="localizacao" id="localizacao">
+        <div class="container">
+            <h2 class="section-title">Localização <span style="color: var(--secondary);">Perfeita</span></h2>
+            <p class="section-subtitle">No coração do Estreito, a região mais valorizada de Florianópolis</p>
+            
+            <div class="local-info">
+                <h3>Facilidade de Acesso para Você e Seus Clientes</h3>
+                <p>Nossa sala está situada em um dos endereços mais convenientes da Grande Florianópolis:</p>
+                
+                <div class="local-benefits">
+                    <div class="benefit-item">
+                        <span class="benefit-icon">✓</span>
+                        <span>Acesso rápido por todas as pontes (5-10 minutos)</span>
+                    </div>
+                    <div class="benefit-item">
+                        <span class="benefit-icon">✓</span>
+                        <span>Estacionamento fácil na porta e redondezas</span>
+                    </div>
+                    <div class="benefit-item">
+                        <span class="benefit-icon">✓</span>
+                        <span>Ônibus e transporte público na porta</span>
+                    </div>
+                    <div class="benefit-item">
+                        <span class="benefit-icon">✓</span>
+                        <span>Todos os serviços necessários ao redor</span>
+                    </div>
+                </div>
+                
+                <div class="endereco">
+                    <strong>📍 Endereço Exclusivo:</strong><br>
+                    R. Fúlvio Aducci, 627 - Sala 804<br>
+                    Edifício Ocean View, 8º andar<br>
+                    Estreito, Florianópolis - SC<br>
+                    CEP: 88075-001
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Pronto para Elevar Seu Atendimento Profissional?</h2>
+            <p>Agende uma visita e veja pessoalmente como nossa sala pode transformar a experiência dos seus clientes.</p>
+            <div class="cta-buttons">
+                <a href="https://wa.me/5548998392258?text=Olá! Gostaria de agendar uma visita à sala profissional no Estreito." class="btn-cta-primary">
+                    <i class="fab fa-whatsapp"></i> Agendar pelo WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section class="contato" id="contato">
+        <div class="container">
+            <h2 class="section-title">Entre em <span style="color: var(--secondary);">Contato</span></h2>
+            <p class="section-subtitle">Estamos à disposição para mostrar o espaço e tirar todas suas dúvidas</p>
+            
+            <div class="contato-grid">
+                <div class="contato-info">
+                    <div class="contato-item">
+                        <div class="contato-icon"><i class="fab fa-whatsapp"></i></div>
+                        <div class="contato-text">
+                            <strong>WhatsApp</strong>
+                            <a href="https://wa.me/5548998392258">(48) 9839-2258</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contato-item">
+                        <div class="contato-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="contato-text">
+                            <strong>Endereço</strong>
+                            R. Fúlvio Aducci, 627 - Sala 804<br>
+                            Estreito, Florianópolis - SC
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="https://wa.me/5548998392258" target="_blank" class="social-link whatsapp" title="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="https://www.instagram.com/p/DL0DzqVx-I5/" target="_blank" class="social-link instagram" title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-about">
+                    <h4>CB Coworking</h4>
+                    <p>Espaço profissional premium no Estreito, Florianópolis. Ambiente perfeito para profissionais que buscam oferecer a melhor experiência aos seus clientes.</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Links Rápidos</h4>
+                    <ul class="footer-links">
+                        <li><a href="#header">Início</a></li>
+                        <li><a href="#video">Vídeo</a></li>
+                        <li><a href="#localizacao">Localização</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Planos</h4>
+                    <ul class="footer-links">
+                        <li><a href="#flexibilidade">Diária</a></li>
+                        <li><a href="#flexibilidade">Semanal</a></li>
+                        <li><a href="#flexibilidade">Mensal</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Contato</h4>
+                    <ul class="footer-links">
+                        <li><a href="tel:+5548998392258">(48) 99839-2258</a></li>
+                        <li><a href="https://wa.me/5548998392258">WhatsApp</a></li>
+                        <li><a href="https://www.instagram.com/p/DL0DzqVx-I5/">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 CB Coworking - Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Animation on scroll
+        const animateElements = document.querySelectorAll('.animate-fade-in, .diferencial-card, .flex-card');
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        });
+
+        animateElements.forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'all 0.6s ease-out';
+            observer.observe(el);
+        });
+
+        // Track conversions
+        function trackConversion(eventName) {
+            console.log('Conversion tracked:', eventName);
+            // In a real scenario, you would send this to Google Analytics, Facebook Pixel, etc.
+        }
+
+        // Track important button clicks
+        document.querySelectorAll('.btn-primary, .btn-whatsapp, .btn-cta-primary').forEach(button => {
+            button.addEventListener('click', () => {
+                trackConversion('contact_click');
+            });
+        });
+    </script>
+</body>
+</html>
