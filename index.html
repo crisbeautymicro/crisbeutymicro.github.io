@@ -187,16 +187,22 @@
         }
 
         .video-container {
+            position: relative;
+            width: 100%;
             max-width: 800px;
             margin: 0 auto;
-            border-radius: 15px;
+            padding-top: 56.25%; /* Proporção 16:9 */
             overflow: hidden;
+            border-radius: 15px;
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
         }
 
         .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
-            height: 450px;
+            height: 100%;
             border: none;
         }
 
@@ -766,8 +772,7 @@
             <p class="section-subtitle">Veja em vídeo o que faz da nossa sala a escolha perfeita para seu consultório</p>
             
             <div class="video-container">
-                <!-- Substitua pelo embed do seu vídeo do Instagram ou YouTube -->
-                <iframe src="https://www.instagram.com/p/DL0DzqVx-I5/embed" frameborder="0" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/Y2u3f7gSfjQ?autoplay=0&controls=1&showinfo=0&rel=0&modestbranding=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         </div>
     </section>
@@ -866,7 +871,7 @@
                 <div class="endereco">
                     <strong>📍 Endereço Exclusivo:</strong><br>
                     R. Fúlvio Aducci, 627 - Sala 804<br>
-                    Edifício Ocean View, 8º andar<br>
+                    Edifício CEU Empresarial, 8º andar<br>
                     Estreito, Florianópolis - SC<br>
                     CEP: 88075-001
                 </div>
@@ -916,7 +921,7 @@
                         <a href="https://wa.me/5548998392258" target="_blank" class="social-link whatsapp" title="WhatsApp">
                             <i class="fab fa-whatsapp"></i>
                         </a>
-                        <a href="https://www.instagram.com/p/DL0DzqVx-I5/" target="_blank" class="social-link instagram" title="Instagram">
+                        <a href="https://www.instagram.com/cb.coworking" target="_blank" class="social-link instagram" title="Instagram">
                             <i class="fab fa-instagram"></i>
                         </a>
                     </div>
@@ -958,7 +963,7 @@
                     <ul class="footer-links">
                         <li><a href="tel:+5548998392258">(48) 99839-2258</a></li>
                         <li><a href="https://wa.me/5548998392258">WhatsApp</a></li>
-                        <li><a href="https://www.instagram.com/p/DL0DzqVx-I5/">Instagram</a></li>
+                        <li><a href="https://www.instagram.com/cb.coworking">Instagram</a></li>
                     </ul>
                 </div>
             </div>
